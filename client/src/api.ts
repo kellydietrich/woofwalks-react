@@ -89,7 +89,6 @@ export const getGames = async (config: AxiosRequestConfig): Promise<AxiosRespons
       // Store the tokens in localStorage or secure cookie for later use
       localStorage.setItem('accessToken', accessToken);
       localStorage.setItem('refreshToken', refreshToken);
-      console.log(localStorage.getItem('accessToken'));
       return response;
     } catch (error) {
       // Handle login errors

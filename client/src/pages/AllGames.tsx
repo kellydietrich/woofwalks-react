@@ -24,9 +24,7 @@ interface UserProps {
           // console.log(res.data.user);
           loggedIn = res?.data?.user;
           setLoggedInUser(loggedIn);
-          console.log(loggedInUser);
-          // const user = res.data?.user;
-          // setLoggedInUser(user);
+
           // console.log(loggedInUser)
         } catch (err : any) {
           // here display a message to the user or something else
@@ -37,7 +35,7 @@ interface UserProps {
       getUser(); // <== here we call the function to get the data
     }, []); // dependencies array is empty, so the callback is called only once when the component is mounted
 
-  
+  console.log(loggedInUser)
 
       //     const getUser = async () => {
       //     await gamesApi.getCurrentUser()
@@ -104,7 +102,7 @@ interface UserProps {
             </div>
             <div>
               <h1 className="text-5xl font-bold leading-normal text-white">
-                Welcome to The Game Database, !
+                Welcome to The Game Database, {loggedInUser?.firstName}!
               </h1>
 
 
