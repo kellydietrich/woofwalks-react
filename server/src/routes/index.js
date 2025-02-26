@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var user_routes_1 = require("./user.routes");
+var auth_routes_1 = require("./auth.routes");
+var games_routes_1 = require("./games.routes");
+var router = express_1.default.Router();
+router.get("/healthcheck", function (_, res) { return res.sendStatus(200); });
+router.use(user_routes_1.default);
+router.use(auth_routes_1.default);
+router.use(games_routes_1.default);
+exports.default = router;
